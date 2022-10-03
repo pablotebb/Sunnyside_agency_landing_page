@@ -1,68 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Own css -->
+    <link rel="stylesheet" href="./styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  About
-  Services
-  Projects
-  Contact
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+  </head>
+  <!-- modal -->
+  <body>
+    <!-- MAIN CONTAINER  -->
+    <main class="main-container">
+      <!-- HEADER -->
+      <header class="header">
+        <img class="header__logo" src="./images/logo.svg" alt="logo" />
+        <img
+          class="header_hamburger"
+          src="./images/icon-hamburger.svg"
+          alt="hamburger icon"
+        />
+        <nav class="header-nav">
+          <ul>
+            <li class="header-nav__item"><a href="#">About</a></li>
+            <li class="header-nav__item"><a href="#">Services</a></li>
+            <li class="header-nav__item"><a href="#">Projects</a></li>
+            <li class="header-nav__item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- SECTION CREATIVES -->
+      <section class="section-creatives">
+        <h1 class="section-creatives__title">We are creatives</h1>
+        <img
+          class="section-creatives__arrow-down"
+          src="./images/icon-arrow-down.svg"
+          alt="arrow down icon"
+        />
+        <img
+          class="section-creatives__header-img"
+          src="./images/mobile/image-header.jpg"
+          alt="header image"
+        />
+      </section>
+      <!-- SECTION TRANSFORM -->
+      <section class="section-transform">
+        <article class="section-transform-article">
+          <h2 class="section-transform-article__title">Transform your brand</h2>
+          <p class="section-transform-article__description">
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <p class="section-transform-article__more">Learn more</p>
+        </article>
+        <img
+          class="section-transform-article-image"
+          src="./images/mobile/image-transform.jpg"
+          alt="transform img"
+        />
+      </section>
+      <!-- SECTION STAND OUT -->
+      <section class="section-stand-out">
+        <article class="section-stand-out-article">
+          <h2 class="section-stand-out__title">
+            Stand out to the right audience
+          </h2>
+          <p class="section-stand-out__description">
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <p class="section-stand-out__more">Learn more</p>
+        </article>
+        <img
+          class="section-stand-out-image"
+          src="./images/mobile/image-transform.jpg"
+          alt="transform img"
+        />
+      </section>
+      <!-- SECTION GRAPHIC DESIGN-->
+      <section class="section-graphic-design">
+        <div class="section-graphic-design-left">
+          <img
+            class="section-graphic-design-left__image"
+            src="./images/mobile/image-graphic-design.jpg"
+            alt="grapic design image"
+          />
+          <h3 class="section-graphic-design-left__title">Graphic design</h3>
+          <p class="section-graphic-design-left__description">
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients’
+            attention.
+          </p>
+        </div>
+        <div class="section-graphic-design-right">
+          <img
+            class="section-graphic-design-right__image"
+            src="./images/mobile/image-photography.jpg"
+            alt="photo image"
+          />
+          <h3 class="section-graphic-design-right__title">Photography</h3>
+          <p class="section-graphic-design-right__description">
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
+      </section>
+      <!-- SECTION TESTIMONIALS-->
+      <section class="section-testimonials">
+        <h2>Client testimonials</h2>
+        <article class="article-emily">
+          <img
+            class="article-emily__image"
+            src="./images/image-emily.jpg"
+            alt="emily image"
+          />
+          <p class="article-emily__description">
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <h4 class="article-emily__name">Emily R.</h4>
+          <p class="article-emily__job">Marketing Director</p>
+        </article>
+        <article class="article-thomas">
+          <img
+            class="article-thomas__image"
+            src="./images/image-thomas.jpg"
+            alt="thomas image"
+          />
+          <p class="article-thomas__description">
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <h4 class="article-thomas__name">Thomas S.</h4>
+          <p class="article-thomas__job">Chief Operating Officer</p>
+        </article>
+        <article class="article-jennie">
+          <img
+            class="article-jennie__image"
+            src="./images/image-jennie.jpg"
+            alt="jennie image"
+          />
+          <p class="article-jennie__description">
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <h4 class="article-jennie__name">Jennie F.</h4>
+          <p class="article-jennie__job">Business Owner</p>
+        </article>
+      </section>
+      <!-- SECTION IMAGES-->
+      <section class="section-images">
+        <div class="section-images-first">
+          <img
+            class="section-images-first__image1"
+            src="./images/mobile/image-gallery-milkbottles.jpg"
+            alt="milkbottles image"
+          />
+          <img
+            class="section-images-first__image2"
+            src="./images/mobile/image-gallery-orange.jpg"
+            alt="organge image"
+          />
+        </div>
+        <div class="section-images-second">
+          <img
+            class="section-images-second__image1"
+            src="./images/mobile/image-gallery-cone.jpg"
+            alt="cone image"
+          />
+          <img
+            class="section-images-second__image2"
+            src="./images/mobile/image-gallery-sugar-cubes.jpg"
+            alt="sugar image"
+          />
+        </div>
+      </section>
+      <!-- SECTION SOCIAL NETWORKS -->
+      <section class="section-social-networks">
+        <img
+          class="section-social-networks__logo"
+          src="./images/logo-black.svg"
+          alt="logo image"
+        />
+        <nav class="section-social-networks-menu">
+          <ul>
+            <li class="section-social-networks-menu__link">
+              <a href="#">About</a>
+            </li>
+            <li class="section-social-networks-menu__link">
+              <a href="#">Services</a>
+            </li>
+            <li class="section-social-networks-menu__link">
+              <a href="#">Projects</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="section-social-networks-logos">
+          <img class="section-social-networks-logos__facebook" />
+          src="./images/icon-facebook.svg" alt="facebook icon" />
+          <img class="section-social-networks-logos__instagram" />
+          src="./images/icon-instagram.svg" alt="instagram icon" />
+          <img class="section-social-networks-logos__twitter" />
+          src="./images/icon-twitter.svg" alt="twitter icon" />
+          <img class="section-social-networks-logos__pinterest" />
+          src="./images/icon-pinterest.svg" alt="pinterest icon" />
+        </div>
+      </section>
+    </main>
 
-  We are creatives
-
-  Transform your brand
-
-  We are a full-service creative agency specializing in helping brands grow fast. 
-  Engage your clients through compelling visuals that do most of the marketing for you.
-
-  Learn more
-
-  Stand out to the right audience
-
-  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
-
-  Learn more
-
-  Graphic design
-  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-
-  Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-
-  Client testimonials
-
-  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-  Emily R.
-  Marketing Director
-
-  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-  Thomas S.
-  Chief Operating Officer
-
-  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-  Jennie F.
-  Business Owner
-
-  About
-  Services
-  Projects
-  Contact
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- FOOTER -->
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#" target="_blank">Pablo Belda</a>.
+    </footer>
+  </body>
 </html>
