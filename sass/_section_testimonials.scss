@@ -1,0 +1,54 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.section-testimonials {
+  position: absolute;
+  top: 187.6875rem;
+  // border: 8px solid black;
+  background-color: v.$White;
+  &__title {
+    // border: 1px solid red;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 1.875rem;
+    text-transform: uppercase;
+    color: v.$Dark-grayish-blue;
+    letter-spacing: 0.25rem;
+  }
+  @media (min-width: v.$Width-media) {
+    position: absolute;
+    top: 152.125rem;
+    height: 46.875rem;
+    padding-top: 8.75rem;
+    .articles {
+      display: flex;
+    }
+  }
+}
+
+.article-emily {
+  @include m.testimonial_person();
+  @media (min-width: v.$Width-media) {
+    @include m.testimonial_person(5.0625rem, 5.0625rem);
+    // border: 1px solid red;
+    padding: 0 1.5625rem 0 1.25rem;
+  }
+}
+
+.article-thomas {
+  @include m.testimonial_person();
+  @media (min-width: v.$Width-media) {
+    @include m.testimonial_person(5.0625rem, 5.0625rem);
+    // border: 1px solid red;
+    padding: 0 7.1875rem 0 2.8125rem;
+  }
+}
+
+.article-jennie {
+  @include m.testimonial_person();
+  @media (min-width: v.$Width-media) {
+    @include m.testimonial_person(5.0625rem, 5.0625rem);
+    // border: 1px solid red;
+  }
+}

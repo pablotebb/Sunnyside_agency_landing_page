@@ -1,0 +1,40 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.section-transform {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0;
+  .section-transform-article-image {
+    @include m.image("../images/mobile/image-transform.jpg");
+  }
+  @media (min-width: v.$Width-media) {
+    position: absolute;
+    top: 47.125rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    .section-transform-article-image {
+      flex: 50%;
+      @include m.image("../images/mobile/image-transform.jpg", 35rem);
+    }
+  }
+}
+
+.section-transform-article {
+  display: flex;
+  flex-direction: column;
+  @include m.article;
+  @media (min-width: v.$Width-media) {
+    @include m.article(true, v.$White, 0.9em, v.$Yellow, 2.5em, left);
+    // border: 5px solid red;
+    flex: 50%;
+    padding: 4.375rem 4.375rem 4.375rem 4.375rem;
+    &__more {
+      // border: 1px solid red;
+      font-size: 0.9em;
+      font-weight: 700;
+      margin-left: 2.1875rem;
+    }
+  }
+}

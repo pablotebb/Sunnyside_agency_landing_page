@@ -1,0 +1,76 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.section-graphic-design {
+  // border: 8px solid blue;
+  position: relative;
+  height: 70rem;
+  @media (min-width: v.$Width-media) {
+    position: absolute;
+    width: 100%;
+    top: 117.125rem;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.section-graphic-design-left {
+  // border: 8px solid red;
+  position: relative;
+  &__image {
+    @include m.image("../images/mobile/image-graphic-design.jpg", 35rem);
+  }
+  @include m.article(false, transparent, 0.7em);
+  .container-graphic {
+    // border: 1px solid red;
+    position: absolute;
+    width: 100%;
+    top: 20rem;
+    left: 0;
+  }
+  @media (min-width: v.$Width-media) {
+    position: relative;
+    &__image {
+      flex: 50%;
+      @include m.image("../images/desktop/image-graphic-design.jpg", 35rem);
+    }
+    @include m.article(false, transparent, 0.7em);
+    .container-graphic {
+      // border: 1px solid red;
+      position: absolute;
+      width: 57%;
+      top: 18.75rem;
+      left: 8.125rem;
+    }
+  }
+}
+
+.section-graphic-design-right {
+  position: relative;
+  &__image {
+    @include m.image("../images/mobile/image-photography.jpg", 35rem);
+  }
+  @include m.article(false, transparent, 0.7em);
+  .container-graphic-2 {
+    // border: 1px solid red;
+    position: absolute;
+    width: 100%;
+    top: 20rem;
+    left: 0;
+  }
+  @media (min-width: v.$Width-media) {
+    position: unset;
+    &__image {
+      flex: 50%;
+      @include m.image("../images/desktop/image-photography.jpg", 35rem);
+    }
+    @include m.article(false, transparent, 0.7em);
+    .container-graphic-2 {
+      // border: 1px solid red;
+      position: absolute;
+      width: 30%;
+      top: 18.75rem;
+      left: 51.875rem;
+    }
+  }
+}

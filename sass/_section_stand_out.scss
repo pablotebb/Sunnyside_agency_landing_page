@@ -1,0 +1,40 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.section-stand-out {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0;
+  .section-stand-out-image {
+    @include m.image("./images/mobile/image-stand-out.jpg");
+  }
+  @media (min-width: v.$Width-media) {
+    position: absolute;
+    top: 82.125rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0;
+    .section-stand-out-image {
+      flex: 50%;
+      @include m.image("./images/mobile/image-stand-out.jpg", 35rem);
+    }
+  }
+}
+
+.section-stand-out-article {
+  display: flex;
+  flex-direction: column;
+  @include m.article(true, v.$White, 0.8em, v.$Soft-red);
+  @media (min-width: v.$Width-media) {
+    @include m.article(true, v.$White, 0.9em, v.$Soft-red, 2.5em, left);
+    flex: 50%;
+    // border: 5px solid red;
+    padding: 4.375rem 5rem 4.375rem 4.375rem;
+    &__more {
+      // border: 1px solid red;
+      font-size: 0.9em;
+      font-weight: 700;
+      margin-left: 2.1875rem;
+    }
+  }
+}

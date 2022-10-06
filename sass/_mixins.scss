@@ -1,0 +1,114 @@
+@use "variables" as v;
+
+@mixin article(
+  $more: true,
+  $backgroundColor: v.$White,
+  $font-size: 0.8em,
+  $underline: v.$Yellow,
+  $font-size-title: 1.9em,
+  $text-align: center
+) {
+  width: 100%;
+  background-color: $backgroundColor;
+  border: none;
+  text-align: $text-align;
+  &__title {
+    // border: 1px solid red;
+    color: v.$Dark-desaturated-cyan;
+    font-size: $font-size-title;
+    font-weight: 700;
+    padding: 3.125rem 2.5rem 0;
+  }
+  &__description {
+    // border: 1px solid black;
+    color: v.$Dark-desaturated-cyan;
+    font-size: $font-size;
+    padding: 2.1875rem;
+    line-height: 1.5625rem;
+  }
+
+  @if (more) {
+    &__more {
+      // border: 1px solid green;
+      text-transform: uppercase;
+      font-size: 0.7em;
+      font-weight: 700;
+      margin-bottom: 3.125rem;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline $underline;
+        text-decoration-thickness: 0.5rem;
+      }
+    }
+  }
+}
+
+@mixin image($path-url, $height: 18.75rem) {
+  background-image: url($path-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: $height;
+}
+
+@mixin testimonial_person($width: 3.3125rem, $height: 3.3125rem) {
+  margin-bottom: 3.75rem;
+  &__image {
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+    display: block;
+    margin: 1.25rem auto;
+  }
+  &__description {
+    font-size: 0.9em;
+    padding: 1.25rem;
+    text-align: center;
+    line-height: 1.6875rem;
+    color: v.$Dark-desaturated-cyan;
+  }
+  &__name {
+    // border: 1px solid red;
+    text-align: center;
+    margin-bottom: 0.3125rem;
+  }
+  &__job {
+    text-align: center;
+    color: v.$Dark-grayish-blue;
+  }
+}
+
+@mixin image-grid($path, $colFirst, $colLast, $rowFirst, $rowLast) {
+  background-image: url($path);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: cover;
+  height: 12.5rem;
+  grid-column: $colFirst / $colLast;
+  grid-row: $rowFirst / $rowLast;
+}
+
+@mixin image-social-network($path1, $path2) {
+  background-image: url($path1);
+  background-repeat: no-repeat;
+  width: 2.0625rem;
+  height: 2.0625rem;
+  &:hover {
+    background-image: url($path2);
+    cursor: pointer;
+  }
+}
+
+@mixin selected-item(
+  $padding1: 0.9375rem,
+  $padding2: 1.5625rem,
+  $BGroundC: v.$Yellow,
+  $Color: v.$Black
+) {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  background-color: $BGroundC;
+  border-radius: 1.5625rem;
+  padding: $padding1 $padding2;
+  color: $Color;
+}

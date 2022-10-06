@@ -1,0 +1,51 @@
+@use "variables" as v;
+
+.section-creatives {
+  position: relative;
+  background-color: v.$Blue;
+  height: 24.0625rem;
+  &__title {
+    // border: 1px solid red;
+    color: v.$White;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 0.5rem;
+  }
+  &__arrow-down {
+    position: absolute;
+    // border: 1px solid red;
+    display: block;
+    margin: auto;
+    top: 9.0625rem;
+    left: 10.625rem;
+    z-index: 2;
+  }
+  &__header-img {
+    // border: 1px solid red;
+    background-image: url(../images/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-position-y: -14.375rem;
+    background-size: cover;
+    width: 100%;
+    height: 18.75rem;
+    position: relative;
+  }
+
+  @media (min-width: v.$Width-media) {
+    &__title {
+      // border: 1px solid red;
+      padding-top: 4.25rem;
+      font-size: 3.3em;
+    }
+    &__arrow-down {
+      left: 41.1875rem;
+    }
+    &__header-img {
+      // border: 1px solid red;
+      background-image: url(../images/desktop/image-header.jpg);
+      background-position-y: -16.875rem;
+      height: 47.375rem;
+    }
+  }
+}

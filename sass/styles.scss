@@ -2,3 +2,24 @@
 @use "initial";
 @use "footer";
 @use "mixins" as m;
+@use "header";
+@use "section_creatives";
+@use "section_transform";
+@use "section_stand_out";
+@use "section_graphic_design";
+@use "section_testimonials";
+@use "section_images";
+@use "section_social_networks";
+
+.main-container {
+  position: relative;
+  // border: 1px solid red;
+  width: v.$Width-mobile;
+  height: v.$Height-mobile;
+  margin: 0 auto 3.75rem;
+  @media (min-width: v.$Width-media) {
+    // border: 1px solid red;
+    width: v.$Width-desktop;
+    height: v.$Height-desktop;
+  }
+}

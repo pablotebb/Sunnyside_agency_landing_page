@@ -1,0 +1,77 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.section-images {
+  // border: 8px solid black;
+  position: absolute;
+  top: 253rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+
+  &__image1 {
+    @include m.image-grid(
+      "../images/mobile/image-gallery-milkbottles.jpg",
+      1,
+      2,
+      1,
+      2
+    );
+  }
+  &__image2 {
+    @include m.image-grid(
+      "../images/mobile/image-gallery-orange.jpg",
+      2,
+      3,
+      1,
+      2
+    );
+  }
+  &__image3 {
+    @include m.image-grid(
+      "../images/mobile/image-gallery-cone.jpg",
+      1,
+      2,
+      2,
+      3
+    );
+  }
+  &__image4 {
+    @include m.image-grid(
+      "../images/mobile/image-gallery-sugar-cubes.jpg",
+      2,
+      3,
+      2,
+      3
+    );
+  }
+  @media (min-width: v.$Width-media) {
+    position: absolute;
+    top: 199rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    &__image1 {
+      @include m.image(
+        "../images/desktop/image-gallery-milkbottles.jpg",
+        26.1875rem
+      );
+    }
+    &__image2 {
+      @include m.image(
+        "../images/desktop/image-gallery-orange.jpg",
+        26.1875rem
+      );
+    }
+    &__image3 {
+      @include m.image("../images/desktop/image-gallery-cone.jpg", 26.1875rem);
+    }
+    &__image4 {
+      @include m.image(
+        "../images/desktop/image-gallery-sugarcubes.jpg",
+        26.1875rem
+      );
+    }
+  }
+}

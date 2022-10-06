@@ -1,0 +1,113 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.header {
+  background-color: v.$Blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.125rem 1.25rem 1.125rem;
+  padding-bottom: 3.75rem;
+  &__logo {
+    width: 8.4375rem;
+    height: 1.875rem;
+  }
+  &__hamburger {
+    width: 1.125rem;
+    height: 0.8125rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .header-nav {
+    display: none;
+    &__item {
+    }
+  }
+  &__menu-hamburguer {
+    display: none;
+    position: absolute;
+    top: 5.625rem;
+    background-color: v.$White;
+    width: 21.0625rem;
+    height: 17.75rem;
+    z-index: 5;
+    padding-top: 2.5rem;
+    &__ul {
+      // border: 1px solid black;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.875rem;
+      align-items: center;
+    }
+    &__item {
+      a {
+        text-decoration: none;
+        color: v.$Dark-grayish-blue;
+        font-weight: 600;
+        font-size: 0.9em;
+      }
+    }
+    &__selected {
+      a {
+        @include m.selected-item;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      border: 0.625rem solid v.$White;
+      border-color: transparent v.$White v.$White transparent;
+      top: -1.25rem;
+      left: 19.8125rem;
+    }
+  }
+  @media (min-width: v.$Width-media) {
+    // border: 1px solid blue;
+    padding-left: 4.6875rem;
+    padding-top: 2.1875rem;
+
+    &__hamburger {
+      display: none;
+    }
+    .header-nav {
+      display: block;
+      ul {
+        // border: 1px solid red;
+        width: 31.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 3.4375rem;
+        list-style: none;
+      }
+      &__item {
+        a {
+          color: v.$White;
+          text-decoration: none;
+          &:hover {
+            color: v.$Black;
+          }
+        }
+        &--selected {
+          a {
+            @include m.selected-item(1.125rem, 2.125rem, v.$White, v.$Black);
+            &:hover {
+              @include m.selected-item(
+                1.125rem,
+                2.125rem,
+                v.$Transparent,
+                v.$White
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.display-block {
+  display: block;
+}
