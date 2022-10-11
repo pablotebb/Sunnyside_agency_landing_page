@@ -3,8 +3,16 @@
 
 .section-graphic-design {
   // border: 8px solid blue;
-  position: relative;
+  position: absolute;
+  top: 116.6875rem;
   height: 70rem;
+  width: 100%;
+  @media (min-width: v.$Width-min-media) {
+    // border: 8px solid green;
+    position: absolute;
+    top: 126rem;
+    width: 100%;
+  }
   @media (min-width: v.$Width-media) {
     position: absolute;
     width: 100%;
@@ -19,6 +27,9 @@
   position: relative;
   &__image {
     @include m.image("../images/mobile/image-graphic-design.jpg", 35rem);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 100% 100%;
   }
   @include m.article(false, transparent, 0.7em);
   .container-graphic {
@@ -28,7 +39,7 @@
     top: 20rem;
     left: 0;
   }
-  @media (min-width: v.$Width-media) {
+  @media (min-width: v.$Width-min-media) {
     position: relative;
     &__image {
       flex: 50%;
@@ -38,10 +49,25 @@
     .container-graphic {
       // border: 1px solid red;
       position: absolute;
-      width: 57%;
+      width: 67%;
       top: 18.75rem;
-      left: 8.125rem;
+      left: 18%;
     }
+  }
+  @media (min-width: v.$Width-media) {
+    //   position: relative;
+    //   &__image {
+    //     flex: 50%;
+    //     @include m.image("../images/desktop/image-graphic-design.jpg", 35rem);
+    //   }
+    //   @include m.article(false, transparent, 0.7em);
+    //   .container-graphic {
+    //     // border: 1px solid red;
+    //     position: absolute;
+    //     width: 57%;
+    //     top: 18.75rem;
+    //     left: 8.125rem;
+    //   }
   }
 }
 

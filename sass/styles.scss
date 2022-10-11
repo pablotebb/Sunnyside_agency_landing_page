@@ -14,9 +14,16 @@
 .main-container {
   position: relative;
   // border: 1px solid red;
-  width: v.$Width-mobile;
+  min-width: v.$Width-mobile;
   height: v.$Height-mobile;
   margin: 0 auto 3.75rem;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: v.$Width-min-media) {
+    // border: 10px solid red;
+    min-width: v.$Width-tablet;
+    height: v.$Height-tablet;
+  }
   @media (min-width: v.$Width-media) {
     // border: 1px solid red;
     width: v.$Width-desktop;

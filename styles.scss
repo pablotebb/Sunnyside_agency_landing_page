@@ -12,7 +12,7 @@ body {
 }
 
 .attribution {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   text-align: center;
   margin-bottom: 3.75rem;
 }
@@ -613,9 +613,9 @@ body {
   }
   .section-graphic-design-left .container-graphic {
     position: absolute;
-    width: 67%;
+    width: 57%;
     top: 18.75rem;
-    left: 18%;
+    left: 8.125rem;
   }
 }
 .section-graphic-design-right {
@@ -709,10 +709,11 @@ body {
 }
 
 .section-testimonials {
+  border: 4px solid red;
   position: absolute;
-  top: 186rem;
+  top: 179rem;
   width: 100%;
-  height: 68rem;
+  height: 60rem;
   background-color: hsl(0deg, 0%, 100%);
 }
 .section-testimonials__title {
@@ -729,7 +730,7 @@ body {
     position: absolute;
     width: 100%;
     top: 196rem;
-    height: 68.875rem;
+    height: 46.875rem;
     padding-top: 8.75rem;
   }
 }
@@ -951,47 +952,6 @@ body {
   grid-column: 0.6666666667;
   grid-row: 0.6666666667;
 }
-@media (min-width: 31.875rem) {
-  .section-images {
-    position: absolute;
-    top: 264rem;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-  }
-  .section-images__image1 {
-    background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 26.1875rem;
-    background-position-y: -140px;
-  }
-  .section-images__image2 {
-    background-image: url("../images/desktop/image-gallery-orange.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 26.1875rem;
-  }
-  .section-images__image3 {
-    background-image: url("../images/desktop/image-gallery-cone.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 26.1875rem;
-    background-position-y: -140px;
-    background-position-x: center;
-  }
-  .section-images__image4 {
-    background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 26.1875rem;
-    background-position-x: center;
-  }
-}
 @media (min-width: 81.25rem) {
   .section-images {
     position: absolute;
@@ -1032,7 +992,7 @@ body {
 
 .section-social-networks {
   position: absolute;
-  top: 276rem;
+  top: 278rem;
   height: 22.5rem;
   width: 100%;
   background-color: hsl(168deg, 34%, 41%);
@@ -1139,8 +1099,8 @@ body {
 }
 @media (min-width: 31.875rem) {
   .main-container {
-    min-width: 32.5rem;
-    height: 300rem;
+    min-width: 520px;
+    height: 247.8125rem;
   }
 }
 @media (min-width: 81.25rem) {
@@ -1150,4 +1110,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.scss.map */

@@ -2,6 +2,7 @@
 @use "mixins" as m;
 
 .header {
+  // border: 1px solid red;
   background-color: v.$Blue;
   display: flex;
   justify-content: space-between;

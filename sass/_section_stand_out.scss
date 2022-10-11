@@ -2,11 +2,29 @@
 @use "mixins" as m;
 
 .section-stand-out {
+  // border: 1px solid red;
+  position: absolute;
+  top: 76.4375rem;
   display: flex;
   flex-direction: column-reverse;
+  justify-content: flex-end;
   gap: 0;
   .section-stand-out-image {
     @include m.image("./images/mobile/image-stand-out.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 100% 100%;
+  }
+  @media (min-width: v.$Width-min-media) {
+    position: absolute;
+    top: 79rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0;
+    .section-stand-out-image {
+      flex: 50%;
+      @include m.image("./images/desktop/image-stand-out.jpg", 47rem);
+    }
   }
   @media (min-width: v.$Width-media) {
     position: absolute;
@@ -16,7 +34,7 @@
     gap: 0;
     .section-stand-out-image {
       flex: 50%;
-      @include m.image("./images/mobile/image-stand-out.jpg", 35rem);
+      @include m.image("./images/desktop/image-stand-out.jpg", 35rem);
     }
   }
 }
@@ -25,6 +43,18 @@
   display: flex;
   flex-direction: column;
   @include m.article(true, v.$White, 0.8em, v.$Soft-red);
+  @media (min-width: v.$Width-min-media) {
+    flex: 50%;
+    @include m.article(true, v.$White, 0.9em, v.$Soft-red, 2.5em, left);
+    // border: 5px solid red;
+    padding: 4.375rem 0 4.375rem 0;
+    &__more {
+      // border: 1px solid red;
+      font-size: 0.9em;
+      font-weight: 700;
+      margin-left: 2.1875rem;
+    }
+  }
   @media (min-width: v.$Width-media) {
     @include m.article(true, v.$White, 0.9em, v.$Soft-red, 2.5em, left);
     flex: 50%;
